@@ -1,0 +1,49 @@
+name: Notificacion CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  notificar-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v3
+      
+      - name: Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Ejecutar programa
+        run: node index.js
+      
+      - name: Enviar notificacion a ntfy.sh
+        run: |
+          curl -H "Title: Deploy Exitoso" \
+               -H "Priority: high" \
+               -H "Tags: white_check_mark,rocket" \
+               -d "Repositorio: ${{ github.repository }}
+          Rama: ${{ github.ref_name }}
+          Commit: ${{ github.sha }}
+          Autor: ${{ github.actor }}
+          Mensaje: ${{ github.event.head_commit.message }}
+          Estado: Codigo ejecutado correctamente" \
+               https://ntfy.sh/devops-itla
+      
+      - name: Notificar en caso de fallo
+        if: failure()
+        run: |
+          curl -H "Title: Deploy Fallido" \
+               -H "Priority: urgent" \
+               -H "Tags: x,warning" \
+               -d "Error en el repositorio: ${{ github.repository }}
+          Rama: ${{ github.ref_name }}
+          Revisar los logs inmediatamente" \
+               https://ntfy.sh/devops-itla
