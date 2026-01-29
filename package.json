@@ -1,0 +1,18 @@
+{
+  "name": "hola-mundo-ci-cd",
+  "version": "1.0.0",
+  "description": "Proyecto de integracion continua con GitHub Actions y notificaciones ntfy.sh",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node index.js"
+  },
+  "keywords": [
+    "ci",
+    "cd",
+    "github-actions",
+    "ntfy"
+  ],
+  "author": "DevOps ITLA",
+  "license": "MIT"
+}
