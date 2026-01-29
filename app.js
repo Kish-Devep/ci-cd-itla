@@ -1,4 +1,3 @@
-// Función principal del programa Hola Mundo
 function saludar(nombre = "Mundo") {
     return `Hola, ${nombre}!`;
 }
@@ -32,7 +31,6 @@ function limpiarConsola() {
     outputDiv.textContent = '';
 }
 
-// Event listeners
 document.addEventListener('DOMContentLoaded', function() {
     const ejecutarBtn = document.getElementById('ejecutar-btn');
     const limpiarBtn = document.getElementById('limpiar-btn');
@@ -46,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         limpiarConsola();
     });
     
-    // Ejecutar automáticamente al cargar la página
+ 
     const salida = generarSalida();
     mostrarEnConsola(salida);
 });
