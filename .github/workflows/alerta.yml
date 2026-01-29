@@ -28,7 +28,6 @@ jobs:
         run: |
           curl -H "Title: Deploy Exitoso" \
                -H "Priority: high" \
-               -H "Tags: white_check_mark,rocket" \
                -d "Repositorio: ${{ github.repository }}
           Rama: ${{ github.ref_name }}
           Commit: ${{ github.sha }}
