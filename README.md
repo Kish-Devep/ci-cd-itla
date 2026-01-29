@@ -8,3 +8,7 @@ Envía notificaciones automáticas a ntfy.sh/devops-itla
 Notifica tanto en caso de éxito como de fallo
 
 -- Editando para probar notificación.
+
+## Captura de pantalla notificaciones.
+
+![Captura](Images\Imagen.png)
