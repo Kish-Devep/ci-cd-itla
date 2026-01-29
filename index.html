@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Mundo - CI/CD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Programa Hola Mundo</h1>
+            <p class="subtitle">Integración Continua con GitHub Actions</p>
+        </header>
+
+        <main>
+            <section class="output-section">
+                <h2>Salida del Programa</h2>
+                <div id="output" class="output-box"></div>
+            </section>
+
+            <section class="info-section">
+                <h2>Información del Sistema</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="label">Sistema CI/CD:</span>
+                        <span class="value">GitHub Actions</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Notificaciones:</span>
+                        <span class="value">ntfy.sh/devops-itla</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Estado:</span>
+                        <span class="value status-active">Activo</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Lenguaje:</span>
+                        <span class="value">JavaScript (Node.js)</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="actions-section">
+                <button id="ejecutar-btn" class="btn-primary">Ejecutar Programa</button>
+                <button id="limpiar-btn" class="btn-secondary">Limpiar Consola</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>DevOps - ITLA | Electiva 2</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
