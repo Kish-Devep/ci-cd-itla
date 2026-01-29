@@ -11,4 +11,4 @@ Notifica tanto en caso de éxito como de fallo
 
 ## Captura de pantalla notificaciones.
 
-![Captura](Images\Imagen.png)
+![Captura](Images/Imagen.png)
